@@ -4,8 +4,12 @@
 
 ## 使い方
 Javaで書かれています．1.7以上が必要です．  
-Eclipseを使う場合は.classpathと.projectを各自で用意して下さい．  
-（適当なプロジェクトを作ってコピるとかで）
+Eclipseを使う場合は.classpathと.projectを用意して下さい．  
+exampleファイルを使うこともできます．
+```
+cp .classpath.example .classpath
+cp .project.example .project
+```
 
 ## 進捗
 ### Done
@@ -35,6 +39,7 @@ AIはクラスを作り，AriticialIntelligenceを継承して実装して下さ
 com.oxsoft.battleline.ai以下にAriticialIntelligenceを継承したクラスを実装すると，自動的にプログラムがAIとして認識します．  
 AriticialIntelligenceの各関数は，現在のゲームの状態をGameStateContainer型として受け取り，GameStateInput型のインスタンスinputの関数を呼び出すことにより，ゲームをプレイします．  
 必ず何らかのinputの関数を実行し，成功(trueが返ってくる)しなければなりません．成功していない場合は，そのゲームは失格となります．
+
 * action
  * カードを置く（input.putCard），パスをする（input.passTurn）などを行います．
  * パスはカードを置く場所がない，または手札が全て戦術カードの時のみ行うことができます．
