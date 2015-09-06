@@ -31,7 +31,9 @@ public class AIFinder {
 			e.printStackTrace();
 		}
 		if (classes.size() == 0) { // On executable jar
+			classes.add(DrWedge.class);
 			classes.add(MrPhalanx.class);
+			classes.add(MsBattalion.class);
 			classes.add(TheFool.class);
 		}
 		return classes;
